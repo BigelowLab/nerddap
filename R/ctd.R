@@ -64,7 +64,7 @@ ctd_read_raw <- function(filename){
     dplyr::mutate(dplyr::across(dplyr::where(is.numeric), ~dplyr::na_if(., NaN)))
 }
 
-#' Fetch met data for a given buoy - saves monthly and yearly aggregates
+#' Fetch CTD data for a buoy
 #' 
 #' @export
 #' @param buoy char, the buoy id
