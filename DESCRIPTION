@@ -1,0 +1,23 @@
+Package: nerddap
+Type: Package
+Title: NERACOOS ERDDAP Data 
+Version: 0.1.0
+Author: Ben Tupper
+Maintainer: Ben Tupper <btupper@bigelow.org>
+URL: https://github.com/bigelowlab/nerddap
+Description: R language tools for working with NERACOOS ERDDAP data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+Imports:
+  utils,
+  stats,
+  rlang,
+  readr,
+  sf,
+  purrr,
+  tidyr,
+  xml2,
+  httr,
+  dplyr
