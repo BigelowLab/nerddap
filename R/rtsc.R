@@ -30,6 +30,7 @@ query_uri_rtsc = function(buoyid = "$BUOYID", escape = TRUE){
 
 #' Aggregate columns by by the interval specified by user
 #'  
+#' @export
 #' @param x tibble of data
 #' @param by char the interval over which to aggregate
 #' @return aggregated tibble
@@ -50,6 +51,7 @@ aggregate_rtsc = function(x, by = c('year', 'month')[2]){
 
 #' Read raw rtsc data for a given buoy
 #' 
+#' @export
 #' @param filename char, the path to the data to read
 #' @return tibble of data
 read_raw_rtsc <- function(filename){
@@ -61,6 +63,7 @@ read_raw_rtsc <- function(filename){
 
 #' Fetch met data for a given buoy
 #' 
+#' @export
 #' @param buoy char, the buoy id
 #' @return tibble of data
 fetch_buoy_rtsc = function(buoy = "B01"){

@@ -31,6 +31,7 @@ ctd_query_uri = function(buoyid = "$BUOYID", escape = TRUE){
 
 #' Aggregate columns by interval
 #' 
+#' @export
 #' @param x tibble of data
 #' @param by char the interval overwich to aggregate
 #' @return summary tibble
@@ -54,6 +55,7 @@ ctd_aggregate = function(x, by = c("month", "year")[1]){
 
 #' Read raw ctd data for a given buoy
 #' 
+#' @export
 #' @param filename char, the path to the data to read
 #' @return tibble of data
 ctd_read_raw <- function(filename){
@@ -64,6 +66,7 @@ ctd_read_raw <- function(filename){
 
 #' Fetch met data for a given buoy - saves monthly and yearly aggregates
 #' 
+#' @export
 #' @param buoy char, the buoy id
 #' @return tibble of data 
 fetch_buoy_ctd = function(buoy = "B01"){

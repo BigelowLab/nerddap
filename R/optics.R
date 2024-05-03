@@ -28,6 +28,8 @@ query_uri_optics = function(buoyid = "$BUOYID", escape = TRUE){
 }
 
 #' Aggregate optics by the user specifed interval
+#' 
+#' @export
 #' @param x tibble of data
 #' @param by cahr the interval over which to aggregate
 #' @return aggregated pixel
@@ -46,6 +48,7 @@ aggregate_optics = function(x, by = c("month", "year")[1]){
 
 #' Read raw optics data for a given buoy
 #' 
+#' @export
 #' @param filename char, the path to the data to read
 #' @return tibble of data
 read_raw_optics <- function(filename){
@@ -56,6 +59,7 @@ read_raw_optics <- function(filename){
 
 #' Fetch met data for a given buoy (aggregates by year and month)
 #' 
+#' @export
 #' @param buoy char, the buoy id
 #' @return tibble of data (monthly)
 fetch_buoy_optics= function(buoy = "B01"){

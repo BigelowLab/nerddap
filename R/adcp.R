@@ -27,6 +27,7 @@ query_uri_adcp = function(buoyid = "$BUOYID", escape = TRUE){
 
 #' Aggregate columns by by the interval specified by user
 #'  
+#' @export
 #' @param x tibble of data
 #' @param by char the interval over which to aggregate
 #' @return aggregated tibble
@@ -49,6 +50,7 @@ aggregate_adcp = function(x, by = c("month", "year")[1]){
 
 #' Read raw adcp data for a given buoy
 #' 
+#' @export
 #' @param filename char, the path to the data to read
 #' @return tibble of data
 read_raw_adcp <- function(filename){
@@ -58,7 +60,7 @@ read_raw_adcp <- function(filename){
 }
 
 #' Fetch met data for a given buoy
-#' 
+#' @export
 #' @param buoy char, the buoy id
 #' @return tibble of data
 fetch_buoy_adcp= function(buoy = "B01"){

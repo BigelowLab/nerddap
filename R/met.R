@@ -35,6 +35,7 @@ met_query_uri = function(buoyid = "B01", escape = TRUE){
 
 #' Aggregate columns by interval
 #' 
+#' @export
 #' @param x tibble of data
 #' @param by char the interval overwich to aggregate
 #' @return summary tibble
@@ -73,6 +74,7 @@ met_aggregate = function(x, by = c("month", "year")[1]){
 
 #' Read raw met data for a given buoy
 #' 
+#' @export
 #' @param filename char, the path to the data to read
 #' @return tibble of data
 met_read_raw <- function(filename){
@@ -84,6 +86,7 @@ met_read_raw <- function(filename){
 
 #' Fetch met data for a given buoy
 #' 
+#' @export
 #' @param buoy char, the buoy id
 #' @return tibble of data
 fetch_buoy_met = function(buoy = "B01"){

@@ -33,6 +33,7 @@ complete_intervals_buoys = function(x,
 
 #' Returns a table of buoy metadata
 #' 
+#' @export
 #' @param filename the name of the file to read
 #' @param form char, one of 'table' or 'sf'
 #' @return tibble
@@ -47,6 +48,7 @@ buoy_lut = function(filename = system.file("buoy/buoy_listing.csv", package = "n
 
 #' Modify a timezone attribute on a POSIX object
 #' 
+#' @export
 #' @param x POSIX time (default current time)
 #' @return input with timezone attribute modified
 time_to_utc <- function(x = Sys.time()){
@@ -56,6 +58,7 @@ time_to_utc <- function(x = Sys.time()){
 
 #' Decompose a direction to u,v vectors
 #'
+#' @export
 #' @param x tibble of data
 #' @param varname char the name of the varoable to decompose
 #' @return tibble with add varname_u and varname_v columns added
@@ -73,6 +76,7 @@ decompose_direction = function(x, varname = 'wind_direction'){
 #' Given a raw data table, for each 'name_qc' mask with a relacement 
 #' wherever qc fails threshold
 #'  
+#' @export
 #' @param x tibble of raw data
 #' @param threshold numeric records at or below this value are retained
 #' @param suffix character the pattern to identify columns to be dropped
@@ -95,6 +99,7 @@ mask_qc <- function(x, threshold = 0, suffix = "_qc", replacement = NA_real_){
 
 #' Fetch ERRDAP CSV file
 #' 
+#' @export
 #' @param x char a url for download
 #' @param filename char, the destination for the file
 #' @param ... other argument for \code{download.file}
@@ -116,6 +121,7 @@ fetch_errdap_csv <- function(x, filename = tempfile(), ...){
 
 #' Given a raw data table, drop 'name_qc' columns
 #' 
+#' @export
 #' @param x tibble of raw data
 #' @param suffix character the pattern to identify columns to be dropped
 #' @return the input table with selected columns dropped
@@ -127,6 +133,7 @@ drop_suffix <- function(x,  suffix = "_qc"){
 
 #' Aggregate columns by interval
 #' 
+#' @export
 #' @param x tibble of data
 #' @param by char the interval over which to aggregate
 #' @return summary tibble 
@@ -168,6 +175,7 @@ aggregate_buoy = function(x, by = c("month", "year")[1]) {
 
 #' Fetch buoy data for one or more datasets
 #' 
+#' @export
 #' @param buoy char, one or more buoy id (B01, etc)
 #' @param what char, one or more datasets names
 #' @return NULL

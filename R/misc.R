@@ -1,5 +1,6 @@
 #' Compute the range of values per column
 #' 
+#' @export
 #' @param x a table with one or more numeric columns
 #' @param na.rm logical, if TRUE compute after removing NAs
 #' @param collapse logical, if TRUE compute a single range for all data
@@ -23,6 +24,7 @@ table_range = function(x, na.rm = TRUE, collapse = TRUE){
 #' Given a set of values compute the standard summary of 
 #' \code{min, q25, median, mean, q75, max}
 #' 
+#' @export
 #' @param x numeric vector of values
 #' @param na.rm logical, if TRUE remove NA values before computing summaries
 #' @return named vector of summary values
