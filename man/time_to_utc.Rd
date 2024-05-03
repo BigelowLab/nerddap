@@ -8,8 +8,9 @@ time_to_utc(x = Sys.time())
 }
 \arguments{
 \item{x}{POSIX time (default current time)}
-
-\item{input}{with timezone attribute modified}
+}
+\value{
+input with timezone attribute modified
 }
 \description{
 Modify a timezone attribute on a POSIX object

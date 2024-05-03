@@ -16,8 +16,6 @@ Imports:
   rlang,
   readr,
   sf,
-  purrr,
-  tidyr,
   xml2,
   httr,
   dplyr

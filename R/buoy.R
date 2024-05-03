@@ -36,7 +36,7 @@ complete_intervals_buoys = function(x,
 #' @param filename the name of the file to read
 #' @param form char, one of 'table' or 'sf'
 #' @return tibble
-buoy_lut = function(filename = here::here("data","buoy", "buoy_listing.csv"),
+buoy_lut = function(filename = system.file("buoy/buoy_listing.csv", package = "nerddap"),
                     form = c("table", "sf")[1]){
   x = readr::read_csv(filename, show_col_types = FALSE)
   if (tolower(form[1]) == 'sf'){
@@ -48,7 +48,7 @@ buoy_lut = function(filename = here::here("data","buoy", "buoy_listing.csv"),
 #' Modify a timezone attribute on a POSIX object
 #' 
 #' @param x POSIX time (default current time)
-#' @param input with timezone attribute modified
+#' @return input with timezone attribute modified
 time_to_utc <- function(x = Sys.time()){
   attr(x, "tzone") <- "UTC"
   x

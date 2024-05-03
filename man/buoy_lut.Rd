@@ -5,7 +5,7 @@
 \title{Returns a table of buoy metadata}
 \usage{
 buoy_lut(
-  filename = here::here("data", "buoy", "buoy_listing.csv"),
+  filename = system.file("buoy/buoy_listing.csv", package = "nerddap"),
   form = c("table", "sf")[1]
 )
 }
